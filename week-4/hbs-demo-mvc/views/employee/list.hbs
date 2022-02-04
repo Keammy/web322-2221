@@ -1,0 +1,24 @@
+<h2>Employee List</h2>
+<p>Go to <a href="/">home page</a>.</p>
+<p>Go to <a href="/about">about page</a>.</p>
+<p>Go to <a href="/employee">employee page</a>.</p>
+
+<p>Go to <a href="/employee/create">create employee</a>.</p>
+<p>Go to <a href="/employee/edit">edit employee</a>.</p>
+
+<table border='1'>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Occupation</th>
+        <th>Company</th>
+        <th>Picture</th>
+    </tr>
+    {{#each employees}}
+       {{>employee this}}
+    {{else}}
+        <tr>
+            <td colspan="5">No data available.</td>
+        </tr>
+    {{/each}}
+</table>
